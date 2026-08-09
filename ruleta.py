@@ -11,7 +11,7 @@ lo puede correr millones de veces aislado, que es justo lo que hace
 para certificar.
 """
 
-from . import rng
+import rng
 
 
 # ── Disposición de la rueda ───────────────────────────────────
