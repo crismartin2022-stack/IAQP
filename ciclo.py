@@ -28,9 +28,9 @@ import asyncio
 import json
 import logging
 
-from . import mesa as M
-from . import crupier as C
-from . import billetera as B
+import mesa as M
+import crupier as C
+import billetera as B
 
 log = logging.getLogger("iaqp.ciclo")
 
