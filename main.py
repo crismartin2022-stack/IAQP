@@ -20,7 +20,11 @@ import httpx
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from iaqp import ruleta, mesa as M, crupier as C, billetera as B, ciclo
+import ruleta
+import mesa as M
+import crupier as C
+import billetera as B
+import ciclo
 
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)s %(name)s %(message)s")
