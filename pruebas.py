@@ -4,8 +4,8 @@ Reproduce, en chico, lo que revisa un laboratorio de certificación.
 """
 import sys, time, hashlib
 from collections import Counter
-sys.path.insert(0, "/home/claude")
-from iaqp import rng, ruleta
+sys.path.insert(0, ".")
+import rng, ruleta
 
 print("═" * 62)
 print("1 · PROVABLY FAIR: el compromiso no se puede falsear")
