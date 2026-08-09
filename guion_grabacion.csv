@@ -1,0 +1,125 @@
+archivo,crupier,clip,texto,tono
+audio/valentina/bienvenida_1.mp3,valentina,bienvenida_1,"Bienvenidos a la mesa. Soy Valentina, los acompaño esta noche.","Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/valentina/bienvenida_2.mp3,valentina,bienvenida_2,"Buenas, llegaron justo. Arrancamos.","Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/valentina/bienvenida_3.mp3,valentina,bienvenida_3,Bienvenidos. Acomódense que ya empezamos.,"Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/valentina/hagan_juego_1.mp3,valentina,hagan_juego_1,"Hagan juego, señores.","Neutro, profesional. Se repite mucho: que no canse."
+audio/valentina/hagan_juego_2.mp3,valentina,hagan_juego_2,Mesa abierta. Pongan sus fichas.,"Neutro, profesional. Se repite mucho: que no canse."
+audio/valentina/hagan_juego_3.mp3,valentina,hagan_juego_3,"Adelante, la mesa está abierta.","Neutro, profesional. Se repite mucho: que no canse."
+audio/valentina/ultimas_1.mp3,valentina,ultimas_1,Últimas apuestas.,"Un punto más de urgencia, sin apurar."
+audio/valentina/ultimas_2.mp3,valentina,ultimas_2,"Van cerrando, por favor.","Un punto más de urgencia, sin apurar."
+audio/valentina/no_va_mas_1.mp3,valentina,no_va_mas_1,No va más.,"Firme y corto. Es una orden, no una sugerencia."
+audio/valentina/no_va_mas_2.mp3,valentina,no_va_mas_2,"No va más, señores.","Firme y corto. Es una orden, no una sugerencia."
+audio/valentina/girando_1.mp3,valentina,girando_1,Allá va.,"Baja el volumen, expectativa."
+audio/valentina/girando_2.mp3,valentina,girando_2,Gira la bola.,"Baja el volumen, expectativa."
+audio/valentina/sin_ganadores_1.mp3,valentina,sin_ganadores_1,Esta vez no hubo suerte. Vamos con la próxima.,"Neutro, nunca burlón. El jugador acaba de perder."
+audio/valentina/sin_ganadores_2.mp3,valentina,sin_ganadores_2,La casa se lleva esta. Sigue la mesa.,"Neutro, nunca burlón. El jugador acaba de perder."
+audio/valentina/ganadores_1.mp3,valentina,ganadores_1,¡Tenemos ganadores! Felicitaciones.,"Alegre y genuino, sin gritar."
+audio/valentina/ganadores_2.mp3,valentina,ganadores_2,"Muy bien, ahí hay premio.","Alegre y genuino, sin gritar."
+audio/valentina/ganadores_3.mp3,valentina,ganadores_3,Buena esa. Pagamos.,"Alegre y genuino, sin gritar."
+audio/valentina/premio_grande_1.mp3,valentina,premio_grande_1,¡Qué manera de acertar! Tremendo premio.,Sorpresa auténtica. Es el momento del video que comparten.
+audio/valentina/premio_grande_2.mp3,valentina,premio_grande_2,¡Eso es un golazo! Felicitaciones.,Sorpresa auténtica. Es el momento del video que comparten.
+audio/valentina/cero_1.mp3,valentina,cero_1,Cero. La casa saluda.,Neutro. El cero fastidia: no festejarlo.
+audio/valentina/cero_2.mp3,valentina,cero_2,"Salió el cero, señores.",Neutro. El cero fastidia: no festejarlo.
+audio/valentina/saludo_mesa_1.mp3,valentina,saludo_mesa_1,Bienvenido a la mesa.,Breve y amable.
+audio/valentina/saludo_mesa_2.mp3,valentina,saludo_mesa_2,"Sumate, hay lugar.",Breve y amable.
+audio/valentina/despedida_1.mp3,valentina,despedida_1,Cerramos por hoy. Gracias por acompañarnos.,"Cálido, cierra la sesión."
+audio/valentina/despedida_2.mp3,valentina,despedida_2,"Hasta la próxima, que anden bien.","Cálido, cierra la sesión."
+audio/valentina/numero_00.mp3,valentina,numero_00,Cero.,Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_01.mp3,valentina,numero_01,"Uno, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_02.mp3,valentina,numero_02,"Dos, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_03.mp3,valentina,numero_03,"Tres, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_04.mp3,valentina,numero_04,"Cuatro, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_05.mp3,valentina,numero_05,"Cinco, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_06.mp3,valentina,numero_06,"Seis, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_07.mp3,valentina,numero_07,"Siete, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_08.mp3,valentina,numero_08,"Ocho, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_09.mp3,valentina,numero_09,"Nueve, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_10.mp3,valentina,numero_10,"Diez, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_11.mp3,valentina,numero_11,"Once, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_12.mp3,valentina,numero_12,"Doce, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_13.mp3,valentina,numero_13,"Trece, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_14.mp3,valentina,numero_14,"Catorce, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_15.mp3,valentina,numero_15,"Quince, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_16.mp3,valentina,numero_16,"Dieciséis, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_17.mp3,valentina,numero_17,"Diecisiete, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_18.mp3,valentina,numero_18,"Dieciocho, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_19.mp3,valentina,numero_19,"Diecinueve, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_20.mp3,valentina,numero_20,"Veinte, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_21.mp3,valentina,numero_21,"Veintiuno, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_22.mp3,valentina,numero_22,"Veintidós, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_23.mp3,valentina,numero_23,"Veintitrés, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_24.mp3,valentina,numero_24,"Veinticuatro, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_25.mp3,valentina,numero_25,"Veinticinco, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_26.mp3,valentina,numero_26,"Veintiséis, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_27.mp3,valentina,numero_27,"Veintisiete, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_28.mp3,valentina,numero_28,"Veintiocho, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_29.mp3,valentina,numero_29,"Veintinueve, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_30.mp3,valentina,numero_30,"Treinta, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_31.mp3,valentina,numero_31,"Treinta y uno, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_32.mp3,valentina,numero_32,"Treinta y dos, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_33.mp3,valentina,numero_33,"Treinta y tres, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_34.mp3,valentina,numero_34,"Treinta y cuatro, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_35.mp3,valentina,numero_35,"Treinta y cinco, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/valentina/numero_36.mp3,valentina,numero_36,"Treinta y seis, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/bienvenida_1.mp3,matias,bienvenida_1,"Buenas. Matías por acá, vamos a jugar un rato.","Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/matias/bienvenida_2.mp3,matias,bienvenida_2,Bienvenidos. Siéntense que esto arranca.,"Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/matias/bienvenida_3.mp3,matias,bienvenida_3,Acá estamos. Mesa lista.,"Cálido, sin apuro. Es lo primero que escucha el jugador."
+audio/matias/hagan_juego_1.mp3,matias,hagan_juego_1,Hagan juego.,"Neutro, profesional. Se repite mucho: que no canse."
+audio/matias/hagan_juego_2.mp3,matias,hagan_juego_2,"Mesa abierta, adelante.","Neutro, profesional. Se repite mucho: que no canse."
+audio/matias/hagan_juego_3.mp3,matias,hagan_juego_3,"A poner fichas, señores.","Neutro, profesional. Se repite mucho: que no canse."
+audio/matias/ultimas_1.mp3,matias,ultimas_1,"Últimas, que cierro.","Un punto más de urgencia, sin apurar."
+audio/matias/ultimas_2.mp3,matias,ultimas_2,Van cerrando.,"Un punto más de urgencia, sin apurar."
+audio/matias/no_va_mas_1.mp3,matias,no_va_mas_1,No va más.,"Firme y corto. Es una orden, no una sugerencia."
+audio/matias/no_va_mas_2.mp3,matias,no_va_mas_2,"Listo, no va más.","Firme y corto. Es una orden, no una sugerencia."
+audio/matias/girando_1.mp3,matias,girando_1,Ahí va.,"Baja el volumen, expectativa."
+audio/matias/girando_2.mp3,matias,girando_2,Rueda la bola.,"Baja el volumen, expectativa."
+audio/matias/sin_ganadores_1.mp3,matias,sin_ganadores_1,Nada esta vez. Seguimos.,"Neutro, nunca burlón. El jugador acaba de perder."
+audio/matias/sin_ganadores_2.mp3,matias,sin_ganadores_2,Se la llevó la casa. Otra vuelta.,"Neutro, nunca burlón. El jugador acaba de perder."
+audio/matias/ganadores_1.mp3,matias,ganadores_1,Ahí hay ganadores.,"Alegre y genuino, sin gritar."
+audio/matias/ganadores_2.mp3,matias,ganadores_2,Bien ahí. Pagamos.,"Alegre y genuino, sin gritar."
+audio/matias/ganadores_3.mp3,matias,ganadores_3,Esa salió redonda. Felicitaciones.,"Alegre y genuino, sin gritar."
+audio/matias/premio_grande_1.mp3,matias,premio_grande_1,"Uh, tremendo premio. Bien jugado.",Sorpresa auténtica. Es el momento del video que comparten.
+audio/matias/premio_grande_2.mp3,matias,premio_grande_2,Eso sí que estuvo bueno. Felicitaciones.,Sorpresa auténtica. Es el momento del video que comparten.
+audio/matias/cero_1.mp3,matias,cero_1,Cero. Casa.,Neutro. El cero fastidia: no festejarlo.
+audio/matias/cero_2.mp3,matias,cero_2,Y salió el cero.,Neutro. El cero fastidia: no festejarlo.
+audio/matias/saludo_mesa_1.mp3,matias,saludo_mesa_1,"Bienvenido, hay lugar.",Breve y amable.
+audio/matias/saludo_mesa_2.mp3,matias,saludo_mesa_2,Sumate tranquilo.,Breve y amable.
+audio/matias/despedida_1.mp3,matias,despedida_1,Cerramos acá. Gracias por venir.,"Cálido, cierra la sesión."
+audio/matias/despedida_2.mp3,matias,despedida_2,Nos vemos la próxima.,"Cálido, cierra la sesión."
+audio/matias/numero_00.mp3,matias,numero_00,Cero.,Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_01.mp3,matias,numero_01,"Uno, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_02.mp3,matias,numero_02,"Dos, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_03.mp3,matias,numero_03,"Tres, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_04.mp3,matias,numero_04,"Cuatro, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_05.mp3,matias,numero_05,"Cinco, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_06.mp3,matias,numero_06,"Seis, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_07.mp3,matias,numero_07,"Siete, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_08.mp3,matias,numero_08,"Ocho, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_09.mp3,matias,numero_09,"Nueve, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_10.mp3,matias,numero_10,"Diez, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_11.mp3,matias,numero_11,"Once, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_12.mp3,matias,numero_12,"Doce, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_13.mp3,matias,numero_13,"Trece, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_14.mp3,matias,numero_14,"Catorce, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_15.mp3,matias,numero_15,"Quince, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_16.mp3,matias,numero_16,"Dieciséis, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_17.mp3,matias,numero_17,"Diecisiete, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_18.mp3,matias,numero_18,"Dieciocho, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_19.mp3,matias,numero_19,"Diecinueve, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_20.mp3,matias,numero_20,"Veinte, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_21.mp3,matias,numero_21,"Veintiuno, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_22.mp3,matias,numero_22,"Veintidós, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_23.mp3,matias,numero_23,"Veintitrés, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_24.mp3,matias,numero_24,"Veinticuatro, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_25.mp3,matias,numero_25,"Veinticinco, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_26.mp3,matias,numero_26,"Veintiséis, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_27.mp3,matias,numero_27,"Veintisiete, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_28.mp3,matias,numero_28,"Veintiocho, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_29.mp3,matias,numero_29,"Veintinueve, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_30.mp3,matias,numero_30,"Treinta, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_31.mp3,matias,numero_31,"Treinta y uno, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_32.mp3,matias,numero_32,"Treinta y dos, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_33.mp3,matias,numero_33,"Treinta y tres, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_34.mp3,matias,numero_34,"Treinta y cuatro, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_35.mp3,matias,numero_35,"Treinta y cinco, negro.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
+audio/matias/numero_36.mp3,matias,numero_36,"Treinta y seis, rojo.",Claro y parejo. Se van a escuchar miles de veces: sin adornos.
