@@ -1,0 +1,89 @@
+schema: spec-driven
+
+context: |
+  Service: IAQP, a standalone FastAPI casino service integrated with QuartzPlay wallet APIs.
+  Runtime: Python 3.11 declared; current local interpreter is Python 3.14.7.
+  Architecture: pure RNG and roulette rules, round state machine, async live-table loop, HTTP API, PostgreSQL via asyncpg.
+  Persistence: IAQP PostgreSQL/Supabase; QuartzPlay remains the sole wallet balance authority.
+  Safety invariants: draw only after bets close; AI dealer narrates public state only; no configurable house edge.
+  Deployment: Uvicorn via Procfile; Semgrep CI runs on staging and main.
+  Testing: manual statistical evidence script; no test framework, coverage, lint, formatter, or static type checker configured.
+
+strict_tdd: false
+
+workflow:
+  execution_mode: interactive
+  artifact_store:
+    mode: openspec
+  chained_pr_strategy: ask-always
+  review_budget_lines: 400
+
+testing:
+  detected: "2026-09-02"
+  strict_tdd: false
+  test_runner:
+    available: false
+    framework: null
+    command: null
+  evidence_script:
+    available: true
+    command: "python3 pruebas.py"
+    scope: "Manual RNG, roulette rules, and RTP statistical evidence; prints results without test assertions."
+  test_layers:
+    unit:
+      available: false
+      tool: null
+    integration:
+      available: false
+      tool: null
+    e2e:
+      available: false
+      tool: null
+  coverage:
+    available: false
+    command: null
+  quality:
+    linter:
+      available: false
+      command: null
+    type_checker:
+      available: false
+      command: null
+    formatter:
+      available: false
+      command: null
+    security_scan:
+      available: true
+      command: "semgrep ci"
+      ci_workflow: ".github/workflows/semgrep.yml"
+  verification:
+    syntax_command: "python3 -m compileall -q ."
+    verified_commands:
+      - "python3 -m compileall -q ."
+      - "python3 pruebas.py"
+
+rules:
+  proposal:
+    - Preserve casino safety invariants and QuartzPlay wallet ownership.
+    - Include rollback plans for persistence, wallet, API, or deployment changes.
+  specs:
+    - Use RFC 2119 keywords and Given/When/Then scenarios.
+    - State effects on draw timing, auditability, public-state isolation, and idempotency where relevant.
+  design:
+    - Keep pure game rules isolated from database, network, clock, and LLM concerns.
+    - Document cross-service failure handling and data ownership for wallet or database changes.
+  tasks:
+    - Group work hierarchically into reviewable units no larger than 400 changed lines.
+    - Ask before proposing chained PRs.
+  apply:
+    rules:
+      - Follow existing module-level Python style and preserve public API compatibility unless a spec authorizes change.
+    tdd: false
+    test_command: "python3 pruebas.py"
+  verify:
+    test_command: "python3 pruebas.py"
+    build_command: "python3 -m compileall -q ."
+    coverage_threshold: 0
+  archive:
+    - Never modify archived change artifacts.
+    - Warn before merging destructive persistence or wallet deltas.
