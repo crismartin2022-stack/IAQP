@@ -56,9 +56,22 @@ Chain strategy: feature-branch-chain
 
 ## Phase 3: Wallet Boundary
 
-- [ ] 3.1 Modify `billetera.py` to parse `QP_URL` and require staging HTTPS hostname membership in `QP_ALLOWED_HOSTS`, rejecting production or unapproved targets before `httpx.AsyncClient` request creation.
-- [ ] 3.2 Record allowed-host and rejected-host manual/stub evidence, proving rejected configuration sends no request and logs no URL credentials, keys, or authorization headers.
-- [ ] 3.3 Run `python3 -m compileall -q .` and `python3 pruebas.py`; record exact result and wallet-mutation status as `N/A` because this change authorizes no transaction.
+- [x] 3.1 Modify `billetera.py` to parse `QP_URL` and require staging HTTPS hostname membership in `QP_ALLOWED_HOSTS`, rejecting production or unapproved targets before `httpx.AsyncClient` request creation.
+- [x] 3.2 Record allowed-host and rejected-host manual/stub evidence, proving rejected configuration sends no request and logs no URL credentials, keys, or authorization headers.
+- [x] 3.3 Run `python3 -m compileall -q .` and `python3 pruebas.py`; record exact result and wallet-mutation status as `N/A` because this change authorizes no transaction.
+
+#### Unit 3 Test Evidence
+
+| Check | Result |
+|---|---|
+| Allowed host stub | `https` destination with exact `QP_ALLOWED_HOSTS` membership created one stubbed request. |
+| Rejected host stub | Unapproved URL with URL credentials raised a generic definitive error before `httpx.AsyncClient`; no request or wallet log was emitted. |
+| Non-HTTPS stub | `http` destination raised a generic definitive error before `httpx.AsyncClient`. |
+| Production compatibility stub | Existing production request behavior proceeded without a staging allowlist restriction. |
+| Deterministic tests | `PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit3-venv/bin/python -m unittest discover -s tests -v` passed: 12 tests. |
+| Compilation | `APP_ENV=staging ALLOWED_ORIGINS=https://approved.example PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit3-venv/bin/python -m compileall -q .` passed: exit 0. |
+| Legacy smoke | `APP_ENV=staging ALLOWED_ORIGINS=https://approved.example PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit3-venv/bin/python pruebas.py` passed: exit 0; informational RNG smoke only, not an assertion. |
+| Wallet mutation | `N/A` -- no transaction was authorized or sent. |
 
 ## Phase 4: Isolated Topology And Smoke
 

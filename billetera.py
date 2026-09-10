@@ -27,6 +27,7 @@ QuartzPlay lo reconoce como repetido en vez de pagar dos veces.
 import os
 import asyncio
 import logging
+from urllib.parse import urlsplit
 
 import httpx
 
@@ -34,6 +35,8 @@ log = logging.getLogger("iaqp.billetera")
 
 QP_URL = os.environ.get("QP_URL", "").rstrip("/")
 QP_SERVICE_KEY = os.environ.get("IAQP_SERVICE_KEY", "")
+QP_ALLOWED_HOSTS = os.environ.get("QP_ALLOWED_HOSTS", "")
+APP_ENV = os.environ.get("APP_ENV")
 
 TIEMPO_ESPERA = 8.0
 REINTENTOS = 3
@@ -62,10 +65,35 @@ def ref_devolucion(ronda_id, jugador_id):
     return f"iaqp:dev:{ronda_id}:{jugador_id}"
 
 
+def _validar_destino_staging():
+    if APP_ENV != "staging":
+        return
+
+    hosts_permitidos = {
+        host.strip().lower()
+        for host in QP_ALLOWED_HOSTS.split(",")
+        if host.strip()
+    }
+    try:
+        destino = urlsplit(QP_URL)
+        invalido = (
+            destino.scheme != "https"
+            or destino.hostname is None
+            or destino.hostname.lower() not in hosts_permitidos
+        )
+    except ValueError:
+        invalido = True
+
+    if invalido:
+        raise ErrorBilletera("Destino de billetera invalido", definitivo=True)
+
+
 async def _llamar(camino: str, cuerpo: dict) -> dict:
     if not QP_URL or not QP_SERVICE_KEY:
         raise ErrorBilletera("Billetera sin configurar (QP_URL / IAQP_SERVICE_KEY)",
                              definitivo=True)
+
+    _validar_destino_staging()
 
     ultimo = None
     for intento in range(REINTENTOS):
