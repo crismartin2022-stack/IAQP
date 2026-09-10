@@ -41,10 +41,22 @@ Chain strategy: feature-branch-chain
 
 ## Phase 2: Runtime Readiness And Origins
 
-- [ ] 2.1 Modify `main.py` to validate `APP_ENV` and non-local `ALLOWED_ORIGINS`: exact HTTP(S) origins only; reject wildcards, paths, queries, credentials, and invalid values.
-- [ ] 2.2 Modify `main.py` to preserve liveness-only `/salud` and add `/ready`, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
-- [ ] 2.3 Create `.env.example` with non-secret placeholders for `APP_ENV`, `ALLOWED_ORIGINS`, `DATABASE_URL`, `QP_URL`, `QP_ALLOWED_HOSTS`, and `IAQP_SERVICE_KEY`.
-- [ ] 2.4 Record manual HTTP evidence for approved/unapproved CORS and database-up/database-down `/ready`; run `python3 -m compileall -q .` and `python3 pruebas.py` with exact results.
+- [x] 2.1 Modify `main.py` to validate `APP_ENV` and non-local `ALLOWED_ORIGINS`: exact HTTP(S) origins only; reject wildcards, paths, queries, credentials, and invalid values.
+- [x] 2.2 Modify `main.py` to preserve liveness-only `/salud` and add `/ready`, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
+- [x] 2.3 Create `.env.example` with non-secret placeholders for `APP_ENV`, `ALLOWED_ORIGINS`, `DATABASE_URL`, `QP_URL`, `QP_ALLOWED_HOSTS`, and `IAQP_SERVICE_KEY`.
+- [x] 2.4 Record manual HTTP evidence for approved/unapproved CORS and database-up/database-down `/ready`; run `python3 -m compileall -q .` and `python3 pruebas.py` with exact results.
+
+#### Unit 2 Runtime Evidence
+
+| Check | Result |
+|---|---|
+| Non-local policy | Missing or non-exact `APP_ENV` returned `RuntimeError("APP_ENV invalido")`; `APP_ENV=staging` without `ALLOWED_ORIGINS` returned `RuntimeError("ALLOWED_ORIGINS invalido")`; only exact `APP_ENV=local` retained the intentional `*` developer default. Staging accepted `https://approved.example`; path, empty-credential, and empty-query variants returned `RuntimeError("ALLOWED_ORIGINS invalido")`. |
+| ASGI CORS harness | `APP_ENV=staging ALLOWED_ORIGINS=https://approved.example` returned `200` with `access-control-allow-origin: https://approved.example` for approved origin; unapproved origin returned `200` without that header. |
+| ASGI readiness harness | Mock database success returned `200 {"ok": true}` after `SELECT 1`; mock failure returned `503 {"ok": false}` and logged `[READY] RuntimeError` only. |
+| Syntax | `python3 -m compileall -q .` exited `0` with no output. |
+| Regression evidence | `python3 pruebas.py` exited `0`; uniformity output was `chi-cuadrado: 21.25`, below `50.998` (`PASA`), and all 37 slots appeared. |
+
+The HTTP harness used temporary FastAPI/httpx dependencies and a local `asyncpg` module stub; it made no network or database connection.
 
 ## Phase 3: Wallet Boundary
 

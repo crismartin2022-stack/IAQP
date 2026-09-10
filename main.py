@@ -14,11 +14,13 @@ import json
 import logging
 import asyncio
 from contextlib import asynccontextmanager
+from urllib.parse import urlsplit
 
 import asyncpg
 import httpx
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 import ruleta
 import mesa as M
@@ -31,9 +33,41 @@ logging.basicConfig(level=logging.INFO,
 log = logging.getLogger("iaqp")
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
-ORIGENES = [o.strip() for o in
-            os.environ.get("ALLOWED_ORIGINS", "*").split(",") if o.strip()]
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+
+
+def _origenes_permitidos():
+    app_env = os.environ.get("APP_ENV")
+    if app_env not in {"local", "staging", "production"}:
+        raise RuntimeError("APP_ENV invalido")
+
+    default = "*" if app_env == "local" else ""
+    origenes = [origen.strip() for origen in
+                os.environ.get("ALLOWED_ORIGINS", default).split(",")
+                if origen.strip()]
+
+    if app_env == "local":
+        return origenes
+    if not origenes:
+        raise RuntimeError("ALLOWED_ORIGINS invalido")
+
+    for origen in origenes:
+        try:
+            partes = urlsplit(origen)
+            puerto = partes.port
+        except ValueError:
+            raise RuntimeError("ALLOWED_ORIGINS invalido") from None
+        if ("*" in origen or partes.scheme not in {"http", "https"}
+                or not partes.hostname or partes.username is not None
+                or partes.password is not None
+                or partes.path or partes.query or partes.fragment
+                or "?" in origen or "#" in origen
+                or (puerto is not None and puerto <= 0)):
+            raise RuntimeError("ALLOWED_ORIGINS invalido")
+    return origenes
+
+
+ORIGENES = _origenes_permitidos()
 
 _pool = None
 MESAS = {}
@@ -110,6 +144,18 @@ app.add_middleware(CORSMiddleware, allow_origins=ORIGENES,
 @app.get("/salud")
 async def salud():
     return {"ok": True, "mesas": list(MESAS.keys())}
+
+
+@app.get("/ready")
+async def ready():
+    try:
+        pool = await get_pool()
+        async with pool.acquire() as conn:
+            await conn.execute("SELECT 1")
+    except Exception as e:
+        log.error("[READY] %s", type(e).__name__)
+        return JSONResponse(status_code=503, content={"ok": False})
+    return {"ok": True}
 
 
 @app.get("/api/mesas")
