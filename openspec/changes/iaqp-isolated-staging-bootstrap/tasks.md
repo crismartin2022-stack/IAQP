@@ -41,10 +41,18 @@ Chain strategy: feature-branch-chain
 
 ## Phase 2: Runtime Readiness And Origins
 
-- [ ] 2.1 Modify `main.py` to validate `APP_ENV` and non-local `ALLOWED_ORIGINS`: exact HTTP(S) origins only; reject wildcards, paths, queries, credentials, and invalid values.
-- [ ] 2.2 Modify `main.py` to preserve liveness-only `/salud` and add `/ready`, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
-- [ ] 2.3 Create `.env.example` with non-secret placeholders for `APP_ENV`, `ALLOWED_ORIGINS`, `DATABASE_URL`, `QP_URL`, `QP_ALLOWED_HOSTS`, and `IAQP_SERVICE_KEY`.
-- [ ] 2.4 Record manual HTTP evidence for approved/unapproved CORS and database-up/database-down `/ready`; run `python3 -m compileall -q .` and `python3 pruebas.py` with exact results.
+- [x] 2.1 Modify `main.py` to validate `APP_ENV` and non-local `ALLOWED_ORIGINS`: exact HTTP(S) origins only; reject wildcards, paths, queries, credentials, and invalid values.
+- [x] 2.2 Modify `main.py` to preserve liveness-only `/salud` and add `/ready`, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
+- [x] 2.3 Create `.env.example` with non-secret placeholders for `APP_ENV`, `ALLOWED_ORIGINS`, `DATABASE_URL`, `QP_URL`, `QP_ALLOWED_HOSTS`, and `IAQP_SERVICE_KEY`.
+- [x] 2.4 Add deterministic ASGI regression tests for approved/unapproved CORS and database-up/database-down `/ready`; run compilation and legacy smoke separately from test assertions.
+
+#### Unit 2 Test Evidence
+
+| Command | Result |
+|---|---|
+| `PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit2-venv/bin/python -m unittest discover -s tests -v` | Passed: 8 tests. |
+| `APP_ENV=staging ALLOWED_ORIGINS=https://approved.example PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit2-venv/bin/python -m compileall -q .` | Passed: exit 0. |
+| `APP_ENV=staging ALLOWED_ORIGINS=https://approved.example PYTHONDONTWRITEBYTECODE=1 /var/folders/sw/9651fn8523j550fx9rs3htmh0000gn/T/opencode/iaqp-unit2-venv/bin/python pruebas.py` | Passed: exit 0; informational RNG smoke only, not an assertion. |
 
 ## Phase 3: Wallet Boundary
 
