@@ -79,6 +79,24 @@ class WalletGuardTests(unittest.IsolatedAsyncioTestCase):
 
         client.assert_not_called()
 
+    async def test_staging_invalid_url_creates_no_client_or_request(self):
+        for url in (
+            "https://wallet-staging.example.test:not-a-port",
+            "https://[malformed-host",
+        ):
+            with self.subTest(url=url):
+                billetera = import_billetera(
+                    "staging", url, "wallet-staging.example.test")
+
+                with patch.object(billetera.httpx, "AsyncClient") as client:
+                    with self.assertRaisesRegex(
+                            billetera.ErrorBilletera,
+                            "^Destino de billetera invalido$") as error:
+                        await billetera._llamar("/api/wallet/saldo", {})
+
+                client.assert_not_called()
+                self.assertTrue(error.exception.definitivo)
+
     async def test_production_keeps_existing_request_behavior(self):
         billetera = import_billetera(
             "production", "http://existing.example.test", "")

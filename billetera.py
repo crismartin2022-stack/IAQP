@@ -76,6 +76,7 @@ def _validar_destino_staging():
     }
     try:
         destino = urlsplit(QP_URL)
+        destino.port  # Fuerza validación de puerto antes de crear cliente HTTP.
         invalido = (
             destino.scheme != "https"
             or destino.hostname is None
