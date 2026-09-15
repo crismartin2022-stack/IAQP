@@ -42,9 +42,9 @@ Chain strategy: feature-branch-chain
 ## Phase 2: Runtime Readiness And Origins
 
 - [x] 2.1 Modify `main.py` to validate `APP_ENV` and non-local `ALLOWED_ORIGINS`: exact HTTP(S) origins only; reject wildcards, paths, queries, credentials, and invalid values.
-- [x] 2.2 Modify `main.py` to preserve liveness-only `/salud` and add `/ready`, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
+- [x] 2.2 Modify `main.py` to preserve the liveness-only salud endpoint and add the ready endpoint, acquiring `get_pool()` then executing `SELECT 1`; return generic `503` and log only error class on failure.
 - [x] 2.3 Create `.env.example` with non-secret placeholders for `APP_ENV`, `ALLOWED_ORIGINS`, `DATABASE_URL`, `QP_URL`, `QP_ALLOWED_HOSTS`, and `IAQP_SERVICE_KEY`.
-- [x] 2.4 Add deterministic ASGI regression tests for approved/unapproved CORS and database-up/database-down `/ready`; run compilation and legacy smoke separately from test assertions.
+- [x] 2.4 Add deterministic ASGI regression tests for approved/unapproved CORS and database-up/database-down ready endpoint; run compilation and legacy smoke separately from test assertions.
 
 #### Unit 2 Test Evidence
 
@@ -75,6 +75,7 @@ Chain strategy: feature-branch-chain
 
 ## Phase 4: Isolated Topology And Smoke
 
-- [ ] 4.1 Update `STAGING_AND_RELEASE_PLAN.md` with protected `staging`, dedicated IAQP Railway service/generated HTTPS domain, separate empty Supabase identity, required variables, migration command, and redaction checklist.
-- [ ] 4.2 Add owner smoke procedure: record branch, service, project reference, domain, revision, migration parity, `/ready`, and redacted logs; reject `/salud`, game, betting, and wallet smoke.
+- [ ] 4.1 Produce the final `STAGING_AND_RELEASE_PLAN.md` from `openspec/changes/iaqp-isolated-staging-bootstrap/release-plan-draft.md` with protected `staging`, dedicated IAQP Railway service/generated HTTPS domain, separate empty Supabase identity, required variables, migration command, and redaction checklist.
+- [ ] 4.2 Add owner smoke procedure: record branch, service, project reference, domain, revision, migration parity, ready endpoint result, and redacted logs; reject salud endpoint, game, betting, and wallet smoke.
 - [ ] 4.3 Document failure boundary: halt promotion, disable traffic or redeploy known-good revision, retain database, and forward-fix migrations without production, QuartzPlay, or destructive schema rollback.
+  - 2026-09-15 reconciliation: the Railway and Supabase staging projects exist and the API was deployed from `staging` before this runbook; phase-4 tasks stay open. See live-state-reconciliation.md.
