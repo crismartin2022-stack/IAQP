@@ -7,24 +7,26 @@ context: |
   Persistence: IAQP PostgreSQL/Supabase; QuartzPlay remains the sole wallet balance authority.
   Safety invariants: draw only after bets close; AI dealer narrates public state only; no configurable house edge.
   Deployment: Uvicorn via Procfile; Semgrep CI runs on staging and main.
-  Testing: manual statistical evidence script; no test framework, coverage, lint, formatter, or static type checker configured.
+  Testing: unittest suites under tests/ (runtime readiness, wallet guard) plus a manual statistical evidence script; no coverage, lint, formatter, or static type checker configured.
 
 strict_tdd: false
 
 workflow:
-  execution_mode: interactive
+  execution_mode: auto
   artifact_store:
     mode: openspec
-  chained_pr_strategy: ask-always
+  delivery_strategy: ask-on-risk
+  branch_strategy: feature-branch-chain
   review_budget_lines: 400
 
 testing:
   detected: "2026-09-02"
   strict_tdd: false
   test_runner:
-    available: false
-    framework: null
-    command: null
+    available: true
+    framework: "unittest"
+    command: "python3 -m unittest discover -s tests"
+    limitation: "Suites import application modules that need httpx; not installed locally as of 2026-09-15."
   evidence_script:
     available: true
     command: "python3 pruebas.py"
