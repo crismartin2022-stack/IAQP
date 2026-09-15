@@ -1,0 +1,5 @@
+# Local AI runtime state
+.atl/
+
+# Python bytecode
+__pycache__/
