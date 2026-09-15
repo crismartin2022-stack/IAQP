@@ -70,3 +70,8 @@
 ### Remaining
 
 - 5.1 retirement after the tracker merges into `staging`.
+
+## Batch 4 — Retirement and Archive-Time Deviation (2026-09-15)
+
+- 5.1 done after PRs #16 (chain recovery) and #17 (tracker into `staging`) merged: `IAQP-unit2-runtime-readiness/` and both IAQP worktrees removed after checking for unpushed commits (none) and unexpected files (only a superseded `openspec/config.yaml` edit); two prunable external entries pruned; the untracked-file backup deleted after every file was accounted for against `staging`.
+- Deviation at archive time: `gentle-ai sdd-archive-compose` refused to merge the delta into `openspec/specs/project-memory/spec.md` because that spec is a narrative memory document with no requirement headings. The four requirements were relocated unchanged to a new capability `openspec-governance`; proposal and design were updated, and verification was re-run.

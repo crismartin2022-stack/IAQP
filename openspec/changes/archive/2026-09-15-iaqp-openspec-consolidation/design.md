@@ -2,7 +2,7 @@
 
 ## Technical Approach
 
-Move `IAQP/` onto a consolidation branch created from `origin/staging`, carry the untracked planning artifacts, correct them to merged progress, clear both native blockers, and record the 2026-09-15 sanitized live inventory. Documentation and repository hygiene only; casino invariants and wallet ownership are untouched. Satisfies `specs/project-memory/spec.md`.
+Move `IAQP/` onto a consolidation branch created from `origin/staging`, carry the untracked planning artifacts, correct them to merged progress, clear both native blockers, and record the 2026-09-15 sanitized live inventory. Documentation and repository hygiene only; casino invariants and wallet ownership are untouched. Satisfies `specs/openspec-governance/spec.md` (relocated from `project-memory` at archive time).
 
 ## Architecture Decisions
 

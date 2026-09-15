@@ -1,8 +1,12 @@
-# Delta for project-memory
+# OpenSpec Governance Specification
 
-No effect on draw timing, auditability, public-state isolation, wallet ownership, or idempotency: this delta governs project records only.
+## Purpose
 
-## ADDED Requirements
+Define where IAQP SDD change state lives and how OpenSpec records stay truthful.
+
+No effect on draw timing, auditability, public-state isolation, wallet ownership, or idempotency: this specification governs project records only.
+
+## Requirements
 
 ### Requirement: Canonical SDD State Location
 
