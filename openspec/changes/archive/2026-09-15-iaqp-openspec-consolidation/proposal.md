@@ -23,10 +23,10 @@ IAQP code is merged in `origin/staging`, but OpenSpec is split across four check
 ## Capabilities
 
 ### New Capabilities
-None
+- `openspec-governance`: SDD change state lives only in `IAQP/openspec`; secondary checkouts carry no change trackers; records claim only attested live state.
 
 ### Modified Capabilities
-- `project-memory`: SDD change state lives only in `IAQP/openspec`; secondary checkouts carry no change trackers; records claim only attested live state.
+None. (Relocated from `project-memory` at archive time on 2026-09-15: that spec is a narrative memory document without requirement headings, so the native composer cannot merge requirements into it.)
 
 ## Approach
 
@@ -38,7 +38,7 @@ Exploration approach 1. Casino safety invariants and QuartzPlay wallet ownership
 |---|---|---|
 | `openspec/changes/iaqp-isolated-staging-bootstrap/` | New/Modified | Corrected planning artifacts; route tokens |
 | `openspec/changes/project-memory-and-local-guide/`, `archive/` | Modified/Removed | Archive resolution |
-| `openspec/specs/project-memory/spec.md` | Modified | Canonical-location requirement |
+| `openspec/specs/openspec-governance/spec.md` | New | Governance requirements (canonical location, archive state, live-state records, native status) |
 | `openspec/config.yaml` | Modified | Strategy values and testing facts |
 | `.gitignore`, `supabase/.gitignore`, `supabase/config.toml` | New | Local-state hygiene |
 | Secondary checkouts | Removed | Local only |

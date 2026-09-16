@@ -55,4 +55,4 @@ Each slice stays under 400 authored lines; the generated CLI config is excluded 
 
 ## Phase 5: Retirement
 
-- [ ] 5.1 After the tracker merges into staging, check the unit2 checkout and both iaqp worktrees for unique commits or files; remove clean ones; prune; delete the backup folder.
+- [x] 5.1 After the tracker merges into staging, check the unit2 checkout and both iaqp worktrees for unique commits or files; remove clean ones; prune; delete the backup folder.
