@@ -75,7 +75,8 @@ Chain strategy: feature-branch-chain
 
 ## Phase 4: Isolated Topology And Smoke
 
-- [ ] 4.1 Produce the final `STAGING_AND_RELEASE_PLAN.md` from `openspec/changes/iaqp-isolated-staging-bootstrap/release-plan-draft.md` with protected `staging`, dedicated IAQP Railway service/generated HTTPS domain, separate empty Supabase identity, required variables, migration command, and redaction checklist.
-- [ ] 4.2 Add owner smoke procedure: record branch, service, project reference, domain, revision, migration parity, ready endpoint result, and redacted logs; reject salud endpoint, game, betting, and wallet smoke.
-- [ ] 4.3 Document failure boundary: halt promotion, disable traffic or redeploy known-good revision, retain database, and forward-fix migrations without production, QuartzPlay, or destructive schema rollback.
-  - 2026-09-15 reconciliation: the Railway and Supabase staging projects exist and the API was deployed from `staging` before this runbook; phase-4 tasks stay open. See live-state-reconciliation.md.
+- [x] 4.1 Produce the final `STAGING_AND_RELEASE_PLAN.md` from `openspec/changes/iaqp-isolated-staging-bootstrap/release-plan-draft.md` with protected `staging`, dedicated IAQP Railway service/generated HTTPS domain, separate empty Supabase identity, required variables, migration command, and redaction checklist.
+- [x] 4.2 Add owner smoke procedure: record branch, service, project reference, domain, revision, migration parity, ready endpoint result, and redacted logs; reject salud endpoint, game, betting, and wallet smoke.
+- [x] 4.3 Document failure boundary: halt promotion, disable traffic or redeploy known-good revision, retain database, and forward-fix migrations without production, QuartzPlay, or destructive schema rollback.
+  - 2026-09-15 reconciliation: the Railway and Supabase staging projects exist and the API was deployed from `staging` before this runbook. See live-state-reconciliation.md.
+  - 2026-09-16: tasks 4.1–4.3 delivered in the repository-root `STAGING_AND_RELEASE_PLAN.md` (topology, required variables, migration command, redaction checklist, nine-row smoke procedure, failure boundary). The first smoke run following that procedure is recorded in smoke-2026-09-16.md.
